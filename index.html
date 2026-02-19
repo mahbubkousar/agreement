@@ -300,10 +300,10 @@
             const originalMaxWidth = container.style.maxWidth;
             const originalMinWidth = container.style.minWidth;
 
-            // Apply A4-like fixed width for consistent output (595px ≈ A4 at 72dpi)
-            container.style.width = '595px';
-            container.style.maxWidth = '595px';
-            container.style.minWidth = '595px';
+            // Apply A4 fixed width for formal paper output (794px ≈ A4 at 96dpi)
+            container.style.width = '794px';
+            container.style.maxWidth = '794px';
+            container.style.minWidth = '794px';
 
             html2canvas(container, {
                 scale: 2, // Higher quality
