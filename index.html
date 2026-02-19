@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sweet Prescription - Joint Venture Agreement</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --bg-color: #f9f9f9;
+            --paper-color: #ffffff;
+            --accent-color: #ff6b81;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #agreement-container {
+            background-color: var(--paper-color);
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px dashed var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Replace the src with your actual logo image path if you have it locally */
+        .logo {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            border: 0px solid var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin: 5px 0;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin: 0;
+        }
+
+        .location {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .clause {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .clause-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: underline;
+            margin-bottom: 5px;
+        }
+
+        .signature-section {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .sign-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 220px;
+        }
+
+        /* Style for the drawing canvas */
+        canvas {
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            background-color: #fafafa;
+            cursor: crosshair;
+            touch-action: none; /* Prevents scrolling while signing on mobile */
+        }
+
+        /* Style for the pre-signed image */
+        .pre-signed-img {
+            width: 200px;
+            height: 100px;
+            object-fit: contain;
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+
+        .clear-btn {
+            margin-top: 5px;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .controls {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .save-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(255, 107, 129, 0.3);
+            text-transform: uppercase;
+        }
+
+        .save-btn:active {
+            transform: scale(0.98);
+        }
+
+        @media (min-width: 600px) {
+            .signature-section {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start;
+            }
+            .save-btn {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="agreement-container">
+        <div class="header">
+            <img src="./Gemini_Generated_Image_lh1qjglh1qjglh1q Medium.jpeg" alt="The Sweet Prescription Logo" class="logo" id="logo-img">
+            <h1>The Sweet Prescription</h1>
+            <h2>Joint Venture & Ice Cream Accord</h2>
+            <div class="location">Dhaka, Dhaka Division, Bangladesh</div>
+        </div>
+
+        <div class="content">
+            <p><strong>Date:</strong> <span id="current-date"></span></p>
+            <p>This legally (and romantically) binding document is entered into by and between <strong>Kousar</strong> (hereinafter referred to as <em>"The Husband"</em> or <em>"Chief Scooping Officer"</em>) and <strong>Farja</strong> (hereinafter referred to as <em>"The Wife"</em> or <em>"The Absolute Boss of the House"</em>).</p>
+
+            <div class="clause">
+                <div class="clause-title">Article 1: The Venture</div>
+                <p>Both parties agree to pool their love, patience, and mutual tolerance for sticky fingers to officially launch and operate the food cart known as <strong>"The Sweet Prescription."</strong> Together, we shall cure the mid-sem depression of Dhaka, one scoop at a time.</p>
+            </div>
+
+            <div class="clause">
+                <div class="clause-title">Article 2: The "No Take-Backs" Clause</div>
+                <p>Neither party is permitted to quit, resign, or "go home to their mother" when the ice cream melts, the generator fails, or the customer line gets too long. We are in this together. For better, for worse, for vanilla, and for chocolate.</p>
+            </div>
+
+            <div class="clause">
+                <div class="clause-title">Article 3: Profit Sharing & Universal Law</div>
+                <p>Recognizing the universally accepted law of marriage, profit distribution shall be handled as follows:<br>
+                <strong>a)</strong> What is Farja's, is Farja's.<br>
+                <strong>b)</strong> What is Kousar's, is also Farja's.<br>
+                Therefore, 100% of the executive financial decision-making (and the lion's share of the profits) defaults to The Wife, as she is the undisputed Boss of the House and now, the Boss of the Cart.</p>
+            </div>
+
+            <div class="clause">
+                <div class="clause-title">Article 4: Quality Control</div>
+                <p>Kousar promises to never eat more inventory than he sells. Farja retains the right to "taste test" any flavor at any given time for "quality assurance purposes."</p>
+            </div>
+        </div>
+
+        <div class="signature-section">
+            <div class="sign-box">
+                <p><strong>Kousar</strong><br><span style="font-size: 0.8rem; color: #7f8c8d;">(Chief Scooping Officer)</span></p>
+                <img src="./image.png" alt="Kousar's Signature" class="pre-signed-img">
+            </div>
+
+            <div class="sign-box">
+                <p><strong>Farja</strong><br><span style="font-size: 0.8rem; color: #7f8c8d;">(The Absolute Boss)</span></p>
+                <canvas id="canvas-farja" width="200" height="100"></canvas>
+                <button class="clear-btn" onclick="clearCanvas('canvas-farja')">Clear Signature</button>
+            </div>
+        </div>
+
+        <div class="controls" data-html2canvas-ignore="true">
+            <button class="save-btn" onclick="saveAgreement()">Save Signed Agreement</button>
+        </div>
+    </div>
+
+    <script>
+        // Set today's date
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString('en-US', options);
+
+        // Canvas Drawing Logic (Only for Farja now)
+        function setupCanvas(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            let isDrawing = false;
+
+            // Set drawing style
+            ctx.lineWidth = 2;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = '#2c3e50';
+
+            // Get exact coordinates
+            function getPos(e) {
+                const rect = canvas.getBoundingClientRect();
+                const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+                const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+                return {
+                    x: clientX - rect.left,
+                    y: clientY - rect.top
+                };
+            }
+
+            function startDrawing(e) {
+                isDrawing = true;
+                const pos = getPos(e);
+                ctx.beginPath();
+                ctx.moveTo(pos.x, pos.y);
+                e.preventDefault(); // Prevent scrolling on mobile
+            }
+
+            function draw(e) {
+                if (!isDrawing) return;
+                const pos = getPos(e);
+                ctx.lineTo(pos.x, pos.y);
+                ctx.stroke();
+                e.preventDefault();
+            }
+
+            function stopDrawing() {
+                isDrawing = false;
+                ctx.closePath();
+            }
+
+            // Mouse Events
+            canvas.addEventListener('mousedown', startDrawing);
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', stopDrawing);
+            canvas.addEventListener('mouseout', stopDrawing);
+
+            // Touch Events for Mobile
+            canvas.addEventListener('touchstart', startDrawing, {passive: false});
+            canvas.addEventListener('touchmove', draw, {passive: false});
+            canvas.addEventListener('touchend', stopDrawing);
+        }
+
+        // Initialize only Farja's canvas
+        setupCanvas('canvas-farja');
+
+        // Clear Canvas function
+        function clearCanvas(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        // Save entire document as image
+        function saveAgreement() {
+            const container = document.getElementById('agreement-container');
+            
+            // Hide the clear button temporarily for a cleaner image
+            const clearBtn = document.querySelector('.clear-btn');
+            if(clearBtn) clearBtn.style.display = 'none';
+            
+            html2canvas(container, {
+                scale: 2, // Higher quality
+                backgroundColor: "#f9f9f9",
+                useCORS: true // Important for loading external images like the signature
+            }).then(canvas => {
+                // Restore clear button
+                if(clearBtn) clearBtn.style.display = 'block';
+
+                // Create download link
+                const link = document.createElement('a');
+                link.download = 'Sweet_Prescription_Agreement_Signed.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        }
+    </script>
+</body>
+</html>
