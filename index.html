@@ -290,16 +290,31 @@
         // Save entire document as image
         function saveAgreement() {
             const container = document.getElementById('agreement-container');
-            
+
             // Hide the clear button temporarily for a cleaner image
             const clearBtn = document.querySelector('.clear-btn');
             if(clearBtn) clearBtn.style.display = 'none';
-            
+
+            // Store original styles
+            const originalWidth = container.style.width;
+            const originalMaxWidth = container.style.maxWidth;
+            const originalMinWidth = container.style.minWidth;
+
+            // Apply A4-like fixed width for consistent output (595px ≈ A4 at 72dpi)
+            container.style.width = '595px';
+            container.style.maxWidth = '595px';
+            container.style.minWidth = '595px';
+
             html2canvas(container, {
                 scale: 2, // Higher quality
                 backgroundColor: "#f9f9f9",
                 useCORS: true // Important for loading external images like the signature
             }).then(canvas => {
+                // Restore original styles
+                container.style.width = originalWidth;
+                container.style.maxWidth = originalMaxWidth;
+                container.style.minWidth = originalMinWidth;
+
                 // Restore clear button
                 if(clearBtn) clearBtn.style.display = 'block';
 
